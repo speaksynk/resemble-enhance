@@ -28,3 +28,7 @@ def download(run_dir: str | Path | None = None):
         path.parent.mkdir(parents=True, exist_ok=True)
         torch.hub.download_url_to_file(url, str(path))
     return get_target_path("", run_dir=run_dir)
+
+
+if __name__ == "__main__":
+    download();
